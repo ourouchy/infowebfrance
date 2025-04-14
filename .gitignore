@@ -1,0 +1,26 @@
+# dependencies
+/node_modules
+
+# production
+/dist
+
+# misc
+.env
+.DS_Store
+*.log
+
+# vscode
+.vscode/
+
+# build output
+/build
+/.turbo
+
+# system files
+Thumbs.db
+
+# npm / yarn / bun
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+bun.lockb
