@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/* Polices de caractères */
+@font-face {
+  font-family: 'Suisse Intl';
+  src: url('/fonts/suisse/SuisseIntl-Regular-WebM.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Suisse Intl';
+  src: url('/fonts/suisse/SuisseIntl-Medium-WebM.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gramatika';
+  src: url('/fonts/gramatika/GramatikaBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --primary: #201c1b;
+  --secondary: #f49366;
+  --secondary-dark: #9c5c3b;
+  --tertiary: #59a383;
+  --light-bg: #eef3eb;
+  --beige: #ba9e8c;
+  --grey: #cfd0bd;
+  --teal: #a4bfb8;
+  --purple: #b8abb7;
+}
+
+@layer base {
+  html {
+    font-family: 'Suisse Intl', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-[#201c1b];
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Gramatika', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply rounded-full bg-[#f49366] px-6 py-3 font-medium text-white transition-all hover:bg-[#9c5c3b];
+  }
+
+  .btn-secondary {
+    @apply rounded-full border border-[#201c1b] bg-transparent px-6 py-3 font-medium text-[#201c1b] transition-all hover:bg-[#eef3eb];
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container-custom {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}
